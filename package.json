@@ -1,0 +1,19 @@
+{
+  "name": "india-hospital-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ..",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^5.0.0"
+  }
+}
